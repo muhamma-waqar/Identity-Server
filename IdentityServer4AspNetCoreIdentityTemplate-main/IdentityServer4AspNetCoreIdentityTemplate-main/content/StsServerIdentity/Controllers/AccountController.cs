@@ -69,7 +69,7 @@ public class AccountController : Controller
         var assemblyName = new AssemblyName(type.GetTypeInfo().Assembly.FullName);
         _sharedLocalizer = factory.Create("SharedResource", assemblyName.Name);
     }
-
+    // This method is used to login.
     [HttpGet]
     [AllowAnonymous]
     public async Task<IActionResult> Login(string returnUrl)
